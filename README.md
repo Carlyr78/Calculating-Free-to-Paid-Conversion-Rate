@@ -27,50 +27,93 @@ To complete the task, follow the instructions below.
 First, remember to import the db_course_conversions database and refresh the Schemas pane to see it appear. Apply the USE keyword to use the named database as the default (current) one.
 Retrieve the columns one by one as listed in the task. Use the MIN aggregate function to find the first-time engagement and purchase dates. Apply the DATEDIFF function to see the difference in the respective days. 
 SELECT 
+
     ???,
+    
     ???,
+    
     MIN(???) AS first_date_watched,
+    
     MIN(???) AS first_date_purchased,
+    
     DATEDIFF(???) AS days_diff_reg_watch,
+    
     DATEDIFF(???) AS days_diff_watch_purch
-Next, consider how to join the three tables to retrieve the highlighted records in the Venn diagram.
+    
+
 FROM
+
     student_engagement e
+    
         ???
+        
     student_info i ON ???
+    
         ???
+        
     student_purchases p ON ???
+    
 Applying the MIN aggregate function in the previous step requires grouping the results appropriately.
+
 SELECT 
+
     ???,
+    
     ???,
+    
     MIN(???) AS first_date_watched,
+    
     MIN(???) AS first_date_purchased,
+    
     DATEDIFF(???) AS days_diff_reg_watch,
+    
     DATEDIFF(???) AS days_diff_watch_purch
+    
 FROM
+
     student_engagement e
+    
         ???
+        
     student_info i ON ???
-        ???
+
+    
     student_purchases p ON ???
+    
 GROUP BY ???;
+
 Filter the data to exclude the records where the date of first-time engagement comes later than the date of first-time purchase. Remember to keep the students who have never made a purchase.
+
 SELECT 
+
     ???,
+    
     ???,
+    
     MIN(???) AS first_date_watched,
+    
     MIN(???) AS first_date_purchased,
+    
     DATEDIFF(???) AS days_diff_reg_watch,
+    
     DATEDIFF(???) AS days_diff_watch_purch
+    
 FROM
+
     student_engagement e
+    
         ???
+        
     student_info i ON ???
+    
         ???
+        
     student_purchases p ON ???
+    
 GROUP BY ???
+
 HAVING ???;
+
 
 
 
