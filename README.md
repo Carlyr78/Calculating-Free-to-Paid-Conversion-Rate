@@ -144,14 +144,25 @@ Use the following instructions to carry out the task.
 
 Surround the subquery you created in the previous part (Create the Subquery) in parentheses and give it an alias, say a.
 Consider the skeleton below. Fill in the appropriate columns to retrieve the three metrics described in this task. The results are rounded to two decimal places for clarity. Don’t forget to convert the conversion_rate metric to percentages.
+
 SELECT 
+
     ROUND(COUNT(???) / COUNT(???),
+    
             2) AS conversion_rate,
+            
     ROUND(SUM(???) / COUNT(???),
+    
             2) AS av_reg_watch,
+            
     ROUND(SUM(???) / COUNT(???),
+    
             2) AS av_watch_purch
+            
 FROM
+
     (
+    
         -- Subquery
+        
     ) a;
